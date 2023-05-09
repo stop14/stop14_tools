@@ -1,0 +1,9 @@
+services:
+  stop14_tools.twig_strip_anchors_extension:
+    class: Drupal\stop14_tools\TwigExtension\TwigStripAnchorsExtension
+    tags:
+      - { name: twig.extension }
+  stop14_tools.twig_cast_variables_extension:
+    class: Drupal\stop14_tools\TwigExtension\TwigCastVariablesExtension
+    tags:
+      - { name: twig.extension }

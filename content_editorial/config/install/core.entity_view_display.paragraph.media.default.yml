@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media.field_contextual_caption
+    - field.field.paragraph.media.field_disposition
+    - field.field.paragraph.media.field_media
+    - field.field.paragraph.media.field_overlay
+    - field.field.paragraph.media.field_proportion
+    - paragraphs.paragraphs_type.media
+  module:
+    - text
+id: paragraph.media.default
+targetEntityType: paragraph
+bundle: media
+mode: default
+content:
+  field_contextual_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: capsule_wide
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_disposition: true
+  field_overlay: true
+  field_proportion: true

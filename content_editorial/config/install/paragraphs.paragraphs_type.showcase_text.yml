@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: showcase_text
+label: 'Showcase Text'
+icon_uuid: null
+icon_default: null
+description: 'A showcase treatment of text and images.'
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_disposition
+    - paragraphs.paragraphs_type.showcase_text
+  module:
+    - options
+id: paragraph.showcase_text.field_disposition
+field_name: field_disposition
+entity_type: paragraph
+bundle: showcase_text
+label: Disposition
+description: 'Choose how to place the text in relation to the featured image.'
+required: true
+translatable: false
+default_value:
+  -
+    value: right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

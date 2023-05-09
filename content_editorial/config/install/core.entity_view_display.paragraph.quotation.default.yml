@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quotation.field_attribution
+    - field.field.paragraph.quotation.field_quotation
+    - paragraphs.paragraphs_type.quotation
+  module:
+    - text
+id: paragraph.quotation.default
+targetEntityType: paragraph
+bundle: quotation
+mode: default
+content:
+  field_attribution:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_quotation:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

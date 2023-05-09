@@ -1,0 +1,129 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for stop14_tools module.
+ */
+
+function stop14_tools_preprocess_node(&$vars) {
+
+  /* @var $node \Drupal\node\Entity\Node */
+  $node = $vars['node'];
+
+  $month_in_seconds = 30 * 24 * 60 * 60;
+  $vars['is_new'] = ((int)$node->getCreatedTime() - time()) < $month_in_seconds ? true : false;
+}
+
+/**
+ * @param $vars
+ * Add aspect ratio to all images in media wrapper
+ */
+
+function stop14_tools_preprocess_media(&$vars)
+{
+
+  /* @var Drupal\media\Entity\Media $media */
+  $media = &$vars['media'];
+
+  /* @var  Drupal\Core\Field\FieldItemList $fieldlist */
+
+  foreach ($media->getFields() as &$fieldlist) {
+    /* @var Drupal\Core\Field\FieldItemInterface $field */
+
+    foreach ($fieldlist as $field) {
+      $ar = stop14_tools_set_aspect_ratio($field);
+
+      // Set aspect ratio for media wrapper based on first image field
+      if ($ar && !array_key_exists('aspect_ratio',$vars)) {
+        $vars['aspect_ratio'] = $ar;
+        $vars['figure_aspect_ratio_class'] = "figure-{$ar}";
+      }
+    }
+  }
+}
+
+function stop14_tools_preprocess_image(&$vars) {
+  if (array_key_exists('width', $vars) && array_key_exists('height', $vars)) {
+    $vars['aspect_ratio'] = stop14_tools_aspect_ratio($vars['width'],$vars['height']);
+    if ($vars['aspect_ratio'] !== null) {
+      $vars['attributes']['aspect-ratio'] = $vars['aspect_ratio'];
+      $class = "img-{$vars['aspect_ratio']}";
+
+      if (array_key_exists('class',$vars['attributes'])) {
+        $vars['attributes']['class'] .= " ${$class}";
+      } else {
+        $vars['attributes']['class'] = $class;
+      }
+    }
+  }
+}
+
+/**
+ * @param $field
+ * @return string|null
+ *
+ * Set aspect ratio property for all fields with width and height parameters
+ */
+
+function stop14_tools_set_aspect_ratio($field) {
+  if ($field) {
+    $value = $field->getValue();
+
+    if ($value && array_key_exists('width', $value) && array_key_exists('height', $value)) {
+      $aspect_ratio = stop14_tools_aspect_ratio($value['width'], $value['height']);
+      $field->set('aspect_ratio', $aspect_ratio);
+      return $aspect_ratio;
+    }
+
+  }
+
+  return null;
+}
+
+/**
+ * @param $width
+ * @param $height
+ *
+ * @return string|null
+ *
+ * Calculates aspect ratio based on provided width and height of image and returns a string (null|square|portrait|landscape)
+ */
+
+function stop14_tools_aspect_ratio($width,$height) {
+  if (!$width || !$height) {
+    return null;
+  }
+
+  $width = (int)$width;
+  $height = (int)$height;
+
+  if ($width === $height) {
+    return 'square';
+  } else if ($width > $height) {
+    return 'landscape';
+  } else if ($height > $width) {
+    return 'portrait';
+  } else {
+    return null;
+  }
+
+}
+function stop14_tools_preprocess_field(&$vars) {
+
+  $element = &$vars['element'];
+  if($element['#entity_type'] === 'paragraph') {
+    // Add paragraph object to field template
+
+    $vars['paragraph'] = $vars['element']['#object'];
+
+    /* Stash for now
+
+    if($element['#field_name'] === 'field_link') {
+
+      foreach($element['#items'] as &$item) {
+      }
+    }
+
+    */
+  }
+}
