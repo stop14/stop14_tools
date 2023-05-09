@@ -4,5 +4,10 @@
     "require": {
         "php": ">=8.0"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "extra": {
+      "installer-paths": {
+        "modules/contrib/{$name}": ["type:drupal-module"]
+      }
+    }
 }
