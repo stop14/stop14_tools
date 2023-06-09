@@ -5,6 +5,8 @@
  * Primary module hooks for stop14_tools module.
  */
 
+use Drupal\Core\Template\Attribute;
+
 function stop14_tools_preprocess_node(&$vars) {
 
   /* @var $node \Drupal\node\Entity\Node */
@@ -126,4 +128,65 @@ function stop14_tools_preprocess_field(&$vars) {
 
     */
   }
+}
+
+function stop14_tools_preprocess_views_view_themed_grid(&$vars) {
+  // Get view options
+  $view = $vars['view'];
+  $rows = $vars['rows'];
+  $style = $view->style_plugin;
+  $options = $style->options;
+
+  // Add settings as template variables if needed
+
+  foreach($options as $key => $option) {
+    $vars[$key] = $option;
+  }
+
+  $styleAttr = [
+    "--ribbon-columns-sml: {$options['sml']}",
+    "--ribbon-columns-med: {$options['med']}",
+    "--ribbon-columns-lrg: {$options['lrg']}",
+    "--ribbon-columns-xlrg: {$options['xlrg']}",
+  ];
+
+  // Add slide viewer component options as attributes
+  $vars['grid']['attributes'] = new Attribute([
+    'style' => implode('; ',$styleAttr) .';'
+  ]);
+
+  template_preprocess_views_view_unformatted($vars);
+}
+
+function stop14_tools_preprocess_views_view_ribbon(&$vars) {
+  // Get view options
+  $view = $vars['view'];
+  $rows = $vars['rows'];
+  $style = $view->style_plugin;
+  $options = $style->options;
+
+  // Add settings as template variables if needed
+
+  foreach($options as $key => $option) {
+    $vars[$key] = $option;
+  }
+
+  $styleAttr = [
+    "--ribbon-columns-sml: {$options['sml']}",
+    "--ribbon-columns-med: {$options['med']}",
+    "--ribbon-columns-lrg: {$options['lrg']}",
+    "--ribbon-columns-xlrg: {$options['xlrg']}",
+  ];
+
+  // Add slide viewer component options as attributes
+  $vars['ribbon']['attributes'] = new Attribute([
+    'style' => implode('; ',$styleAttr) .';',
+    'data-ribbon-columns-sml' => (int) $options['sml'],
+    'data-ribbon-columns-med' => (int) $options['med'],
+    'data-ribbon-columns-lrg' => (int) $options['lrg'],
+    'data-ribbon-columns-xlrg' => (int) $options['xlrg'],
+
+  ]);
+
+  template_preprocess_views_view_unformatted($vars);
 }
