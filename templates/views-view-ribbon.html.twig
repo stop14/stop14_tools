@@ -20,7 +20,7 @@
 {% if title %}
   <h2>{{ title }}</h2>
 {% endif %}
-<div class="ribbon" {{ ribbon.attributes }}>
+<div {{ attributes.addClass('ribbon').addClass('rows') }}>
   {% for row in rows %}
     {%
       set row_classes = [

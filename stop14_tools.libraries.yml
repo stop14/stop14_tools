@@ -10,4 +10,12 @@ megamenu:
     - core/drupal
     - core/jquery
     - core/once
+browsertools:
+  js:
+    assets/js/stop14_browser_tools.js: {}
+  dependencies:
+  - core/drupalSettings
+  - core/drupal
+  - core/jquery
+  - core/once
 

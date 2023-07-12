@@ -130,6 +130,15 @@ function stop14_tools_preprocess_field(&$vars) {
   }
 }
 
+function stop14_tools_theme() {
+  return [
+    'stop14_browser_toolbar' => [
+      'template' => 'browser-toolbar',
+      'variables' => []
+    ]
+  ];
+}
+
 function stop14_tools_preprocess_views_view_themed_grid(&$vars) {
   // Get view options
   $view = $vars['view'];
