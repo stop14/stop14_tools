@@ -1,0 +1,218 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.genre_collection_object
+    - facets.facet.material_type_collection_object
+    - facets.facet.name_collection_object
+    - facets.facet.places_collection_objects
+    - facets_summary.facets_summary.collection_objects_summary
+    - views.view.browse_collection_objects
+    - views.view.item_title
+    - views.view.slide_viewer_blocks
+    - views.view.subcollections
+  module:
+    - facets
+    - facets_summary
+    - term_condition
+    - views
+label: Collection
+name: collection
+group: Display
+description: 'Manage Collection Page.'
+requireAllConditions: false
+disabled: false
+conditions:
+  term:
+    id: term
+    negate: false
+    uuid: e3f79498-e14c-47e0-9e83-798d79f9eb2a
+    context_mapping:
+      node: '@node.node_route_context:node'
+    term_uuids:
+      - bfe55772-2c9a-49a6-836f-94fdf2a6a351
+reactions:
+  blocks:
+    id: blocks
+    blocks:
+      0785d5f3-7fda-4462-8f60-b7fcabe18612:
+        uuid: 0785d5f3-7fda-4462-8f60-b7fcabe18612
+        id: 'views_block:item_title-collection'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: above_content
+        weight: '0'
+        custom_id: views_block_item_title_collection
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        exposed: {  }
+        third_party_settings: {  }
+        override: {  }
+      ad7c2d56-e839-473a-92e5-5f0b09209a37:
+        uuid: ad7c2d56-e839-473a-92e5-5f0b09209a37
+        id: 'views_block:slide_viewer_blocks-service_file_block'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: above_content
+        weight: '1'
+        custom_id: views_block_slide_viewer_blocks_service_file_block
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        exposed: {  }
+        third_party_settings: {  }
+        override: {  }
+      8addd50a-632c-4ee1-8ecf-49ffeaa04371:
+        uuid: 8addd50a-632c-4ee1-8ecf-49ffeaa04371
+        id: 'views_exposed_filter_block:browse_collection_objects-main'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: secondary_content
+        weight: '-2'
+        custom_id: views_exposed_filter_block_browse_collection_objects_main
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        views_label: 'Items in this collection'
+        third_party_settings: {  }
+      ca44e21a-b35d-4e70-b66c-e3d1abee725f:
+        uuid: ca44e21a-b35d-4e70-b66c-e3d1abee725f
+        id: 'facets_summary_block:collection_objects_summary'
+        label: 'Collection Objects Summary'
+        provider: facets_summary
+        label_display: '0'
+        region: secondary_content
+        weight: '-1'
+        custom_id: facets_summary_block_collection_objects_summary
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        third_party_settings: {  }
+      585edda5-f13b-409f-90ed-b17cb17b8b88:
+        uuid: 585edda5-f13b-409f-90ed-b17cb17b8b88
+        id: 'views_block:browse_collection_objects-main'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: secondary_content
+        weight: '0'
+        custom_id: views_block_browse_collection_objects_main
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        exposed: {  }
+        third_party_settings: {  }
+        override: {  }
+      b5acd3a8-6621-4c68-b8ea-1c35fd9dde48:
+        uuid: b5acd3a8-6621-4c68-b8ea-1c35fd9dde48
+        id: 'facet_block:places_collection_objects'
+        label: Places
+        provider: facets
+        label_display: '0'
+        region: secondary_sidebar_left
+        weight: '0'
+        custom_id: facet_block_places_collection_objects
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        third_party_settings: {  }
+      60fce9ca-9097-4a8b-8aa0-4120fe5d6b3d:
+        uuid: 60fce9ca-9097-4a8b-8aa0-4120fe5d6b3d
+        id: 'views_block:subcollections-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        region: content
+        weight: '-3'
+        custom_id: views_block_subcollections_block_1
+        theme: nyhs
+        css_class: reversed
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        exposed: {  }
+        third_party_settings: {  }
+        override: {  }
+      2534eaba-21cd-4992-b224-3019b5cca90b:
+        uuid: 2534eaba-21cd-4992-b224-3019b5cca90b
+        id: 'facet_block:name_collection_object'
+        label: Name
+        provider: facets
+        label_display: visible
+        region: secondary_sidebar_left
+        custom_id: facet_block_name_collection_object
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        third_party_settings: {  }
+      d82bf9ae-ef48-4e31-bc94-6b0be8e20a60:
+        uuid: d82bf9ae-ef48-4e31-bc94-6b0be8e20a60
+        id: 'facet_block:genre_collection_object'
+        label: Genre
+        provider: facets
+        label_display: visible
+        region: secondary_sidebar_left
+        custom_id: facet_block_genre_collection_object
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        third_party_settings: {  }
+      4c0aa4cf-cbdb-4457-9990-49dfa710af64:
+        uuid: 4c0aa4cf-cbdb-4457-9990-49dfa710af64
+        id: 'facet_block:material_type_collection_object'
+        label: 'Material Type'
+        provider: facets
+        label_display: visible
+        region: navigation
+        custom_id: facet_block_material_type_collection_object
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        third_party_settings: {  }
+      d951913b-8fb7-4483-9bd4-17ce553600a7:
+        uuid: d951913b-8fb7-4483-9bd4-17ce553600a7
+        id: 'facet_block:material_type_collection_object'
+        label: 'Material Type'
+        provider: facets
+        label_display: visible
+        region: secondary_sidebar_left
+        custom_id: facet_block_material_type_collection_object
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collection
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: -12

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.uniform_title
+id: taxonomy_term.uniform_title
+target_entity_type_id: taxonomy_term
+target_bundle: uniform_title
+default_langcode: site_default
+language_alterable: false

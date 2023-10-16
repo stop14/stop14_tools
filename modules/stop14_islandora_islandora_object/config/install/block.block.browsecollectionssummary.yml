@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.summary_collections
+  module:
+    - context
+    - facets_summary
+    - islandora
+    - system
+  theme:
+    - nyhs
+id: browsecollectionssummary
+theme: nyhs
+region: content
+weight: -19
+provider: null
+plugin: 'facets_summary_block:summary_collections'
+settings:
+  id: 'facets_summary_block:summary_collections'
+  label: 'Browse Collections Summary'
+  label_display: '0'
+  provider: facets_summary
+  context_mapping: {  }
+visibility:
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  context:
+    id: context
+    negate: null
+    values: ''
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: /collections

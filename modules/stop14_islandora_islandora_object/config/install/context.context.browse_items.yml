@@ -1,0 +1,145 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.date_created_items
+    - facets.facet.genre
+    - facets.facet.material_type
+    - facets.facet.name
+    - facets.facet.places
+    - facets.facet.subject
+  content:
+    - 'block_content:basic:814772f8-dd27-4e41-b7f7-b489de24b374'
+  module:
+    - block_content
+    - facets
+label: 'Browse Items'
+name: browse_items
+group: Display
+description: 'Builds the block structure for the browse items page.'
+requireAllConditions: true
+disabled: false
+conditions:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    uuid: 1aee3e1a-3f62-4e31-8b42-76ed7793e647
+    context_mapping: {  }
+    view_inclusion:
+      view-browse-main: view-browse-main
+reactions:
+  blocks:
+    id: blocks
+    uuid: 90c79285-5c5d-42bd-8dd3-33e7bbd954d7
+    blocks:
+      abd53a70-f26b-4d2b-a546-a55dbe90177f:
+        uuid: abd53a70-f26b-4d2b-a546-a55dbe90177f
+        id: 'facet_block:places'
+        label: Places
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '2'
+        custom_id: facet_block_places
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: browse_items
+        context_mapping: {  }
+        third_party_settings: {  }
+      e096c026-2d42-4e66-92a9-dcbc88bd05ea:
+        uuid: e096c026-2d42-4e66-92a9-dcbc88bd05ea
+        id: 'facet_block:material_type'
+        label: 'Material Type'
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '1'
+        custom_id: facet_block_material_type
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: browse_items
+        context_mapping: {  }
+        third_party_settings: {  }
+      aa3b81e8-c1b7-4569-b36f-d7b35cb6d95c:
+        uuid: aa3b81e8-c1b7-4569-b36f-d7b35cb6d95c
+        id: 'facet_block:subject'
+        label: Subject
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '0'
+        custom_id: facet_block_subject
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: browse_items
+        context_mapping: {  }
+        third_party_settings: {  }
+      d0ce0477-4ba8-421f-bbed-c33e505ebe0d:
+        uuid: d0ce0477-4ba8-421f-bbed-c33e505ebe0d
+        id: 'facet_block:genre'
+        label: Genre
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '-1'
+        custom_id: facet_block_genre
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: browse_items
+        context_mapping: {  }
+        third_party_settings: {  }
+      9279dcb4-8129-4e56-93e0-894e8a43cff8:
+        uuid: 9279dcb4-8129-4e56-93e0-894e8a43cff8
+        id: 'facet_block:name'
+        label: Name
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '-2'
+        custom_id: facet_block_name
+        theme: nyhs
+        css_class: ''
+        unique: 1
+        context_id: browse_items
+        context_mapping: {  }
+        third_party_settings: {  }
+      a5e0daf4-6ecc-45f7-9204-8e05a49012d5:
+        uuid: a5e0daf4-6ecc-45f7-9204-8e05a49012d5
+        id: 'facet_block:date_created_items'
+        label: 'Date Created'
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '3'
+        custom_id: facet_block_date_created_items
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: browse_items
+        context_mapping: {  }
+        third_party_settings: {  }
+      14a1e85f-81a7-43a6-aa4b-890781b0c3f4:
+        uuid: 14a1e85f-81a7-43a6-aa4b-890781b0c3f4
+        id: 'block_content:814772f8-dd27-4e41-b7f7-b489de24b374'
+        label: 'Exposed Facet Sidebar Title'
+        provider: block_content
+        label_display: '0'
+        region: main_sidebar_left
+        weight: '-3'
+        custom_id: block_content_814772f8_dd27_4e41_b7f7_b489de24b374
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: browse_items
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: -3

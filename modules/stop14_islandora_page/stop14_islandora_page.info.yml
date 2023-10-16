@@ -1,0 +1,21 @@
+name: 'Basic page'
+description: 'Provides Basic page content type and related configuration. Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - block
+  - context
+  - facets
+  - field
+  - field_permissions
+  - islandora
+  - islandora_core_feature
+  - media
+  - node
+  - path
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+package: 'Stop14 Islandora'

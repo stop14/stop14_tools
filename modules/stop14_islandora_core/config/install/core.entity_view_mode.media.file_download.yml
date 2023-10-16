@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.file_download
+label: 'File Download'
+targetEntityType: media
+cache: true

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.capsule_alt
+label: 'Capsule (Alt)'
+targetEntityType: node
+cache: true

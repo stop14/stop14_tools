@@ -1,0 +1,45 @@
+name: 'Repository Item'
+description: 'Provides Repository Item content type and related configuration. An item in your Islandora repository.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - agile_slide_viewer
+  - better_exposed_filters
+  - block
+  - block_content
+  - content_translation
+  - context
+  - controlled_access_terms
+  - controlled_access_terms_defaults
+  - csv_serialization
+  - facets
+  - facets_summary
+  - field
+  - field_group
+  - field_permissions
+  - geolocation
+  - islandora
+  - islandora_core_feature
+  - language
+  - masonry_views
+  - menu_ui
+  - node
+  - path
+  - rdf
+  - rest
+  - search_api
+  - search_api_solr
+  - serialization
+  - stop14_tools
+  - system
+  - taxonomy
+  - term_condition
+  - text
+  - user
+  - views
+  - views_attachment_tabs
+  - views_bulk_operations
+  - views_field_view
+  - views_infinite_scroll
+  - views_nested_details
+package: 'Stop14 Islandora'

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: text_media_feature
+label: 'Text and Media Feature'
+revision: 1
+description: 'Creates a feature block with text and a single image.'

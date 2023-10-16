@@ -1,0 +1,145 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.date_created_collections
+    - facets.facet.genre_collections
+    - facets.facet.material_type_collections
+    - facets.facet.name_collections
+    - facets.facet.places_collections
+    - facets.facet.subject_collections
+  content:
+    - 'block_content:basic:814772f8-dd27-4e41-b7f7-b489de24b374'
+  module:
+    - block_content
+    - facets
+label: 'Collections Browser'
+name: collections_browser
+group: Display
+description: 'Supporting blocks for the Browse Collections page.'
+requireAllConditions: true
+disabled: false
+conditions:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    uuid: cb1fb6ed-5b11-4cd0-9a6c-a07e42664611
+    context_mapping: {  }
+    view_inclusion:
+      view-browse_collections-main: view-browse_collections-main
+reactions:
+  blocks:
+    id: blocks
+    uuid: 84617387-8ca6-4390-b199-c3a5572429b8
+    blocks:
+      0cae0ef7-f25e-4871-9e61-b01f0808fdf3:
+        uuid: 0cae0ef7-f25e-4871-9e61-b01f0808fdf3
+        id: 'facet_block:subject_collections'
+        label: Subject
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '0'
+        custom_id: facet_block_subject_collections
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collections_browser
+        context_mapping: {  }
+        third_party_settings: {  }
+      eee696e2-424e-4428-bad5-54b02b9576f1:
+        uuid: eee696e2-424e-4428-bad5-54b02b9576f1
+        id: 'facet_block:genre_collections'
+        label: Genre
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '-1'
+        custom_id: facet_block_genre_collections
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collections_browser
+        context_mapping: {  }
+        third_party_settings: {  }
+      8e7affb9-6122-4f07-ac07-660ff1c51481:
+        uuid: 8e7affb9-6122-4f07-ac07-660ff1c51481
+        id: 'facet_block:places_collections'
+        label: Places
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '2'
+        custom_id: facet_block_places_collections
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collections_browser
+        context_mapping: {  }
+        third_party_settings: {  }
+      037344a9-10d2-46a7-b04d-29a9e5a014a6:
+        uuid: 037344a9-10d2-46a7-b04d-29a9e5a014a6
+        id: 'facet_block:material_type_collections'
+        label: 'Material Type'
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '1'
+        custom_id: facet_block_material_type_collections
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collections_browser
+        context_mapping: {  }
+        third_party_settings: {  }
+      431c5134-bc04-4772-93a2-aba5b3d6b908:
+        uuid: 431c5134-bc04-4772-93a2-aba5b3d6b908
+        id: 'facet_block:date_created_collections'
+        label: 'Date Created'
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '3'
+        custom_id: facet_block_date_created_collections
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collections_browser
+        context_mapping: {  }
+        third_party_settings: {  }
+      de13b00d-a1ac-45c5-b94d-94263270335b:
+        uuid: de13b00d-a1ac-45c5-b94d-94263270335b
+        id: 'block_content:814772f8-dd27-4e41-b7f7-b489de24b374'
+        label: 'Exposed Facet Sidebar Title'
+        provider: block_content
+        label_display: '0'
+        region: main_sidebar_left
+        weight: '-3'
+        custom_id: block_content_814772f8_dd27_4e41_b7f7_b489de24b374
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collections_browser
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      dfd6d90f-38ce-4f68-bf02-08c66455dfbe:
+        uuid: dfd6d90f-38ce-4f68-bf02-08c66455dfbe
+        id: 'facet_block:name_collections'
+        label: Name
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '-2'
+        custom_id: facet_block_name_collections
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: collections_browser
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 1

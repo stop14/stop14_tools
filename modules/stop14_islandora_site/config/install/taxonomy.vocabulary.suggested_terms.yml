@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Suggested Terms'
+vid: suggested_terms
+description: 'Suggested terms will appear on the homepage. They should be a search term meant for submission to the Browse Items page.'
+weight: 0

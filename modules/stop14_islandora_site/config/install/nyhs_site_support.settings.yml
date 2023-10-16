@@ -1,0 +1,28 @@
+collection_searchfield_placeholder: 'Search the Digital Library'
+collections_route_path: collections
+default_collection: ''
+about_text:
+  value: '<h2>About the Digital Library</h2><p>The Shelby White &amp; Leon Levy Digital Library includes selections from the New-York Historical Society''s archives and the Patricia D. Klingenstein Library''s collections of photographs, manuscripts, broadsides, maps, and other materials relating to the history of New York and the United States. They represent over two centuries of collecting at the Patricia D. Klingenstein Library. We encourage users to explore the growing repository of collections available through the Shelby White &amp; Leon Levy Digital Library, and to visit the Patricia D. Klingenstein Library in person to consult our rich array of materials that have not yet been digitized.</p>'
+  format: full_html
+collections_vocabulary: nyhs_collections
+featured_collections_description:
+  value: '<div>Many collections in the Shelby White &amp; Leon Levy Digital Library relate to important&nbsp;events in American history, including the American Revolution and the Civil War. Other collections include photographs of New York City streets, buildings, landmarks, and people from the mid nineteenth-century through the twentieth century. The Digital Library also offers collections related to Black history, as well as prints, drawings, maps, broadsides, and other ephemera. A good place to start exploring our digitized collections is the&nbsp;<a href="/node/12">Treasures of the Patricia D. Klingenstein Library</a>, a chronological survey of over 100 highlights from our collections.</div>'
+  format: full_html
+general_rights_statement:
+  value: '<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a mattis nulla, in molestie velit. Cras sodales, dolor at molestie luctus, sem leo ornare augue, in faucibus nisl odio id quam. Etiam sit amet leo in purus dictum malesuada. Aenean eu nibh eget libero tincidunt mollis sed sed augue.</span></p>'
+  format: basic_html
+reproduction_statement:
+  value: '<p><span>Etiam imperdiet vestibulum purus id suscipit. Pellentesque ornare sapien id nisl posuere imperdiet. Maecenas nec magna massa. Suspendisse non ornare lacus. Morbi non commodo odio. Ut at lorem porttitor, elementum lectus sit amet, cursus nisi. Sed iaculis diam in risus lacinia viverra.</span></p>'
+  format: basic_html
+reproduction_button_text:
+  value: '<p>Order a reproduction</p>'
+  format: basic_html
+reproductions_link: 'https://www.nyhistory.org/about/rights-reproductions'
+reproductions_button_text: 'Order a reproduction'
+content_statement_link: '#'
+browse_items_deck:
+  value: '<p>Browse an alphabetical list of all items in the Shelby White &amp; Leon Levy Digital Library. Filter by specific names, places, subjects, genres and material types in the left-hand column.</p>'
+  format: basic_html
+browse_collections_deck:
+  value: '<p>Browse an alphabetical list of all digitized collections in the Shelby White &amp; Leon Levy Digital Library. Filter by specific&nbsp;names, places, subjects, genres and material types in the left-hand column.</p>'
+  format: basic_html

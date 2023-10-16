@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'NYHS Collections'
+vid: nyhs_collections
+description: 'N-YHS Digital Collections'
+weight: 0

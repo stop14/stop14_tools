@@ -1,0 +1,35 @@
+name: Core
+description: 'Provides core components required by other features.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - block
+  - block_content
+  - comment
+  - contact
+  - content_translation
+  - context
+  - contextual
+  - eva
+  - field
+  - field_permissions
+  - file
+  - image
+  - islandora
+  - media
+  - menu_link_content
+  - node
+  - path
+  - path_alias
+  - responsive_image
+  - shortcut
+  - svg_image
+  - system
+  - taxonomy
+  - text
+  - toolbar
+  - tour
+  - user
+  - views
+  - views_field_view
+package: 'Stop14 Islandora'

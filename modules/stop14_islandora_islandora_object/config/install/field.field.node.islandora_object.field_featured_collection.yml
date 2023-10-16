@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_collection
+    - node.type.islandora_object
+    - taxonomy.vocabulary.featured_collections
+id: node.islandora_object.field_featured_collection
+field_name: field_featured_collection
+entity_type: node
+bundle: islandora_object
+label: 'Featured Collection'
+description: 'Add this item to a featured collection. Featured collections are managed from the <a href=''https://islandora.traefik.me/admin/structure/taxonomy/manage/featured_collections/overview'' title=''Managed Featured Collections;>taxonomy page</a>. Only applies to “collection” items.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      featured_collections: featured_collections
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

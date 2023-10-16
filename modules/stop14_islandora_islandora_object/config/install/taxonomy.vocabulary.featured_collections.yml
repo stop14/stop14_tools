@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Featured Collections'
+vid: featured_collections
+description: 'Featured collections that are marked “promote to front page” are displayed on the homepage.'
+weight: 0

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.suggested_terms
+id: taxonomy_term.suggested_terms
+target_entity_type_id: taxonomy_term
+target_bundle: suggested_terms
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Digital Format'
+vid: digital_format
+description: ''
+weight: 0

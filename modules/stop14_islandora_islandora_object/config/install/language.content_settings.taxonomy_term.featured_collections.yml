@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.featured_collections
+id: taxonomy_term.featured_collections
+target_entity_type_id: taxonomy_term
+target_bundle: featured_collections
+default_langcode: site_default
+language_alterable: false

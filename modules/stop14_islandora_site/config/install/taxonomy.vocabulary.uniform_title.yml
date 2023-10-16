@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Uniform Title'
+vid: uniform_title
+description: ''
+weight: 0

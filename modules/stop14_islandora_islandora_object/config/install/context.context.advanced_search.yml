@@ -1,0 +1,80 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.date_created_advanced_search
+    - facets.facet.physical_form
+    - facets.facet.resource_type
+  module:
+    - facets
+label: 'Advanced Search'
+name: advanced_search
+group: Display
+description: 'Assigns blocks to the Advanced Search page'
+requireAllConditions: false
+disabled: false
+conditions:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    uuid: ab9b9fad-f1b4-427d-bef1-2d704bd57efc
+    context_mapping: {  }
+    view_inclusion:
+      view-solr_search_content-page_1: view-solr_search_content-page_1
+reactions:
+  blocks:
+    id: blocks
+    uuid: e90f2397-8794-4226-a6f2-bc02ae34137f
+    blocks:
+      23fc41c6-eded-4ea3-92e6-643726d42c1d:
+        uuid: 23fc41c6-eded-4ea3-92e6-643726d42c1d
+        id: 'facet_block:resource_type'
+        label: 'Resource Type'
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '0'
+        custom_id: facet_block_resource_type
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: advanced_search
+        context_mapping: {  }
+        third_party_settings: {  }
+      11acaef7-c5fc-4e61-b2d3-87eb4030d0db:
+        uuid: 11acaef7-c5fc-4e61-b2d3-87eb4030d0db
+        id: 'facet_block:physical_form'
+        label: 'Physical Form'
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '0'
+        custom_id: facet_block_physical_form
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: advanced_search
+        context_mapping: {  }
+        third_party_settings: {  }
+      1506bccc-28cf-4009-a492-3ffaae48281d:
+        uuid: 1506bccc-28cf-4009-a492-3ffaae48281d
+        id: 'facet_block:date_created_advanced_search'
+        label: 'Date Created'
+        provider: facets
+        label_display: visible
+        region: main_sidebar_left
+        weight: '0'
+        custom_id: facet_block_date_created_advanced_search
+        theme: nyhs
+        css_class: ''
+        unique: 0
+        context_id: advanced_search
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+  body_class:
+    id: body_class
+    body_class: advanced-search
+    saved: false
+weight: 0

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Digital Origin'
+vid: digital_origin
+description: ''
+weight: 0

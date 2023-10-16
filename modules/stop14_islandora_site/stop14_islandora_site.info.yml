@@ -1,0 +1,27 @@
+name: Site
+description: 'Provides site components.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - block
+  - block_content
+  - bulk_update_fields
+  - ckeditor5
+  - contact
+  - editor
+  - field
+  - filter
+  - islandora_audio
+  - islandora_core_feature
+  - islandora_image
+  - islandora_video
+  - language
+  - media
+  - media_library
+  - nyhs_site_support
+  - rdf
+  - system
+  - taxonomy
+  - text
+  - token_filter
+package: 'Stop14 Islandora'

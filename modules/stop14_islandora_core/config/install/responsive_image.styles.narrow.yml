@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.medium
+    - image.style.small
+  theme:
+    - nyhs
+id: narrow
+label: Narrow
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: medium
+    breakpoint_id: nyhs.med
+    multiplier: 1x
+breakpoint_group: nyhs
+fallback_image_style: small

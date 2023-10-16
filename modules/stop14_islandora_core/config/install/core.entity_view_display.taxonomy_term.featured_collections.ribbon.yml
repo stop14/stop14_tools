@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.ribbon
+    - field.field.taxonomy_term.featured_collections.field_promote
+    - taxonomy.vocabulary.featured_collections
+  module:
+    - text
+id: taxonomy_term.featured_collections.ribbon
+targetEntityType: taxonomy_term
+bundle: featured_collections
+mode: ribbon
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  taxonomy_term_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_promote: true
+  langcode: true
+  search_api_excerpt: true
