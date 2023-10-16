@@ -39,8 +39,6 @@ dependencies:
     - field.field.node.islandora_object.field_mode_of_issuance
     - field.field.node.islandora_object.field_model
     - field.field.node.islandora_object.field_note
-    - field.field.node.islandora_object.field_nyhs_collection
-    - field.field.node.islandora_object.field_nyhs_identifier
     - field.field.node.islandora_object.field_oclc_number
     - field.field.node.islandora_object.field_owning_institution
     - field.field.node.islandora_object.field_physical_form
@@ -587,24 +585,6 @@ content:
     region: content
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_nyhs_collection:
-    type: entity_reference_autocomplete
-    weight: 24
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_nyhs_identifier:
-    type: string_textfield
-    weight: 31
-    region: content
-    settings:
-      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_oclc_number:

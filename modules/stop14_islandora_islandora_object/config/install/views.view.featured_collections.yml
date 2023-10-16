@@ -190,7 +190,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: '[nyhs_site_support_settings:featured_collections_description]'
+          content: ''
           tokenize: false
         area_text_custom_1:
           id: area_text_custom_1

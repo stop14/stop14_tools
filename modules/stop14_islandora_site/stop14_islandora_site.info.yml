@@ -18,7 +18,6 @@ dependencies:
   - language
   - media
   - media_library
-  - nyhs_site_support
   - rdf
   - system
   - taxonomy

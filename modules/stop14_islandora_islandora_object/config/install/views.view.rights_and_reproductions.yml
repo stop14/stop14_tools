@@ -97,7 +97,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h3>Rights</h3>\r\n{% if field_rights %}\r\n  {{ field_rights }}\r\n{% else %}\r\n  {{ '[nyhs_site_support_settings:general_rights_statement]' | token_replace | raw }}\r\n{% endif %}"
+            text: "<h3>Rights</h3>\r\n{% if field_rights %}\r\n  {{ field_rights }}\r\n{% else %}\r\n  {{ '' | token_replace | raw }}\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -249,7 +249,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: '<a class=''button cta'' href=''[nyhs_site_support_settings:reproductions_link]'' target="_blank">[nyhs_site_support_settings:reproductions_button_text]</a>'
+          content: '<a class=''button cta'' href='''' target="_blank"></a>'
           tokenize: false
       display_extenders: {  }
     cache_metadata:
