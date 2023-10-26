@@ -1,0 +1,35 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - facets.facet.temporal_subject
+  module:
+    - context
+    - facets
+    - islandora
+  theme:
+    - lehigh
+id: lehigh_temporalsubject
+theme: lehigh
+region: quaternary_content
+weight: -3
+provider: null
+plugin: 'facet_block:temporal_subject'
+settings:
+  id: 'facet_block:temporal_subject'
+  label: 'Temporal Subject'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: temporalsubject
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-solr_search_content-page_1: view-solr_search_content-page_1
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

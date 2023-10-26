@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.site_disposition
+id: taxonomy_term.site_disposition
+target_entity_type_id: taxonomy_term
+target_bundle: site_disposition
+default_langcode: site_default
+language_alterable: false

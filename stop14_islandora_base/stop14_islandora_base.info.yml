@@ -1,0 +1,35 @@
+name: 'Stop14 Islandora Base'
+description: 'Getting a leg up on Islandora configuration for the Stop14 Theme Building system.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - better_exposed_filters
+  - block
+  - context
+  - controlled_access_terms
+  - eva
+  - facets
+  - facets_summary
+  - field
+  - field_group
+  - geolocation
+  - image
+  - islandora
+  - islandora_core_feature
+  - language
+  - link
+  - masonry_views
+  - media
+  - node
+  - responsive_image
+  - search_api
+  - search_api_solr
+  - stop14_tools
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+  - views_attachment_tabs
+  - views_field_view
+  - views_infinite_scroll

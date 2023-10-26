@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: medium
+label: 'Medium (750w)'
+effects:
+  226a49f7-8984-4361-8ff7-9913a33af2ae:
+    uuid: 226a49f7-8984-4361-8ff7-9913a33af2ae
+    id: image_scale
+    weight: 2
+    data:
+      width: 750
+      height: null
+      upscale: false
