@@ -52,9 +52,9 @@ function stop14_tools_preprocess_image(&$vars) {
       $class = "img-{$vars['aspect_ratio']}";
 
       if (array_key_exists('class',$vars['attributes'])) {
-        $vars['attributes']['class'] .= " ${$class}";
+        $vars['attributes']['class'][] = " ". $class;
       } else {
-        $vars['attributes']['class'] = $class;
+        $vars['attributes']['class'] = [$class];
       }
     }
   }
