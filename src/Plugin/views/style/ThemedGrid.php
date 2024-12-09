@@ -89,6 +89,7 @@ class ThemedGrid extends StylePluginBase {
       '#title' => $this->t('Themed Grid'),
       '#open' => TRUE,
     ];
+    
     if (\Drupal::service('stop14_tools.themed_grid.service')->flightCheck()) {
       $form += \Drupal::service('stop14_tools.themed_grid.service')
         ->buildSettingsForm($this->options);

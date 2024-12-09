@@ -153,17 +153,17 @@ function stop14_tools_preprocess_views_view_themed_grid(&$vars) {
   }
 
   $styleAttr = [
-    "--ribbon-columns-sml: {$options['sml']}",
-    "--ribbon-columns-med: {$options['med']}",
-    "--ribbon-columns-lrg: {$options['lrg']}",
-    "--ribbon-columns-xlrg: {$options['xlrg']}",
+    "--grid-columns-sml: {$options['breakpoints']['sml']}",
+    "--grid-columns-med: {$options['breakpoints']['med']}",
+    "--grid-columns-lrg: {$options['breakpoints']['lrg']}",
+    "--grid-columns-xlrg: {$options['breakpoints']['xlrg']}",
   ];
 
-  // Add slide viewer component options as attributes
-  $vars['grid']['attributes'] = new Attribute([
+  // Add component options as attributes
+  $vars['attributes'] = new Attribute([
     'style' => implode('; ',$styleAttr) .';'
   ]);
-
+  
   template_preprocess_views_view_unformatted($vars);
 }
 
